@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="document" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Document" inverseName="category" inverseEntity="Document"/>
+    </entity>
+    <entity name="Document" representedClassName="Document" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="rawModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="size" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="document" inverseEntity="Category"/>
+    </entity>
+    <elements>
+        <element name="Document" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Category" positionX="-54" positionY="-9" width="128" height="73"/>
+    </elements>
+</model>
